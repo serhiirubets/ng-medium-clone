@@ -11,6 +11,7 @@ import {EffectsModule} from '@ngrx/effects';
 import {TopBarModule} from './shared/modules/topBar/topBar.module';
 import {PersistenceService} from './shared/services/persistence.service';
 import {AuthInterceptor} from './shared/services/authInterceptor.service';
+import {GlobalFeedModule} from './globalFeed/globalFeed.module';
 
 const authInterceptor = {
   provide: HTTP_INTERCEPTORS,
@@ -28,6 +29,7 @@ const authInterceptor = {
     AuthModule,
     HttpClientModule,
     TopBarModule,
+    GlobalFeedModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({
