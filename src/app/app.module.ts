@@ -12,6 +12,8 @@ import {TopBarModule} from './shared/modules/topBar/topBar.module';
 import {PersistenceService} from './shared/services/persistence.service';
 import {AuthInterceptor} from './shared/services/authInterceptor.service';
 import {GlobalFeedModule} from './globalFeed/globalFeed.module';
+import {YourFeedModule} from "./yourFeed/yourFeed.module";
+import {TagFeedModule} from "./tagFeed/tagFeed.module";
 
 const authInterceptor = {
   provide: HTTP_INTERCEPTORS,
@@ -30,6 +32,8 @@ const authInterceptor = {
     HttpClientModule,
     TopBarModule,
     GlobalFeedModule,
+    YourFeedModule,
+    TagFeedModule,
     StoreModule.forRoot({router: routerReducer}),
     StoreRouterConnectingModule.forRoot(),
     EffectsModule.forRoot([]),

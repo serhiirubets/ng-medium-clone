@@ -10,6 +10,7 @@ import {RouterModule} from '@angular/router';
 import {ErrorMessageModule} from '../errorMessage/errorMessage.module';
 import {LoadingModule} from '../loading/loading.module';
 import {PaginationModule} from '../pagination/pagination.module';
+import {TagListModule} from '../tagList/tagList.module';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import {PaginationModule} from '../pagination/pagination.module';
     ErrorMessageModule,
     LoadingModule,
     PaginationModule,
+    TagListModule,
     EffectsModule.forFeature([GetFeedEffect]),
     StoreModule.forFeature('feed', reducers)
   ],
