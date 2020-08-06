@@ -14,6 +14,8 @@ import {AuthInterceptor} from './shared/services/authInterceptor.service';
 import {GlobalFeedModule} from './globalFeed/globalFeed.module';
 import {YourFeedModule} from "./yourFeed/yourFeed.module";
 import {TagFeedModule} from "./tagFeed/tagFeed.module";
+import {ArticleModule} from "./article/article.module";
+import {CreateArticleModule} from "./createArticle/createArticle.module";
 
 const authInterceptor = {
   provide: HTTP_INTERCEPTORS,
@@ -34,6 +36,8 @@ const authInterceptor = {
     GlobalFeedModule,
     YourFeedModule,
     TagFeedModule,
+    CreateArticleModule,
+    ArticleModule,
     StoreModule.forRoot({router: routerReducer}),
     StoreRouterConnectingModule.forRoot(),
     EffectsModule.forRoot([]),
