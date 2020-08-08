@@ -16,6 +16,7 @@ import {YourFeedModule} from "./yourFeed/yourFeed.module";
 import {TagFeedModule} from "./tagFeed/tagFeed.module";
 import {ArticleModule} from "./article/article.module";
 import {CreateArticleModule} from "./createArticle/createArticle.module";
+import {EditArticleModule} from "./editArticle/editArticle.module";
 
 const authInterceptor = {
   provide: HTTP_INTERCEPTORS,
@@ -38,6 +39,7 @@ const authInterceptor = {
     TagFeedModule,
     CreateArticleModule,
     ArticleModule,
+    EditArticleModule,
     StoreModule.forRoot({router: routerReducer}),
     StoreRouterConnectingModule.forRoot(),
     EffectsModule.forRoot([]),

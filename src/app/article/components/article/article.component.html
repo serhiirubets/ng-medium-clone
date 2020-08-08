@@ -13,11 +13,11 @@
           <span class="date">{{article.createdAt}}</span>
         </div>
         <span *ngIf="isAuthor$ | async">
-          <a [routerLink]="['/articles', article.slug, 'edit']" class="btn btn-outline-secondary">
+          <a [routerLink]="['/articles', article.slug, 'edit']" class="btn btn-sm btn-outline-secondary">
             <i class="ion-edit"></i>
             Edit article
           </a>
-          <button class="btn btn-outline-danger btn-sm" (click)="deleteArticle()"></button>
+          <button class="btn btn-sm btn-outline-danger" (click)="deleteArticle()">Delete</button>
         </span>
       </div>
     </div>
