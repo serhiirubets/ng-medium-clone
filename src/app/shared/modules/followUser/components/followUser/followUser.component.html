@@ -1,0 +1,7 @@
+<button class="btn btn-sm action-btn btn-outline-secondary" *ngIf="!isFollowing" (click)="toggleFollow()">
+  <i class="ion-plus-round"></i> &nbsp; Follow {{slugProps}}
+</button>
+
+<button class="btn btn-sm action-btn btn-secondary" *ngIf="isFollowing" (click)="toggleFollow()">
+  <i class="ion-minus-round"></i> &nbsp; Unfollow {{slugProps}}
+</button>

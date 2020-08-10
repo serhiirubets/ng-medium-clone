@@ -19,6 +19,7 @@ import {CreateArticleModule} from "./createArticle/createArticle.module";
 import {EditArticleModule} from "./editArticle/editArticle.module";
 import {SettingsModule} from "./settings/settings.module";
 import {UserProfileModule} from "./userProfile/userProfile.module";
+import {FollowUserModule} from "./shared/modules/followUser/followUser.module";
 
 const authInterceptor = {
   provide: HTTP_INTERCEPTORS,
@@ -44,6 +45,7 @@ const authInterceptor = {
     EditArticleModule,
     SettingsModule,
     UserProfileModule,
+    FollowUserModule,
     StoreModule.forRoot({router: routerReducer}),
     StoreRouterConnectingModule.forRoot(),
     EffectsModule.forRoot([]),
